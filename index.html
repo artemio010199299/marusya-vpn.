@@ -1,6 +1,15 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#071126"><title>МАРУСЯ VPN</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#173b68,#07142a 55%,#030916);color:#fff;font:16px Arial,sans-serif}.wrap{max-width:1050px;width:92%;margin:auto}header{display:flex;align-items:center;gap:12px;padding:18px 0;font-weight:bold;letter-spacing:2px}header img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:1px solid #e8b94d}.hero{position:relative;overflow:hidden;border:1px solid #d8a944;border-radius:26px;min-height:350px;padding:65px 7%;background:#08152c}.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.3}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#061126ee,#06112677)}.hero>div{position:relative;z-index:1;max-width:650px}.tag{color:#f4c45e;letter-spacing:3px;font-size:12px;font-weight:bold}h1{font-size:clamp(42px,7vw,76px);color:#ffe9a8;margin:18px 0}.lead{color:#d3def0;line-height:1.7}section{padding:48px 0}h2{text-align:center;color:#ffe9a8;font-size:32px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:24px;border-radius:20px;background:linear-gradient(150deg,#142b4d,#09172d);border:1px solid #d8a94466}.card h3{font-size:23px}.card p{color:#aebed7;line-height:1.6;min-height:48px}.btn{display:inline-block;background:linear-gradient(130deg,#ffedb3,#d99b2c);color:#15213a;padding:13px 18px;border-radius:30px;text-decoration:none;font-weight:bold;border:0;cursor:pointer}.secondary{background:#ffffff10;color:white;border:1px solid #d8a944}.sub{overflow-wrap:anywhere;background:#030b19;color:#d6e0f2;padding:15px;border-radius:12px;font-size:12px;line-height:1.6}.center{text-align:center}.hint{color:#b9c7dd;line-height:1.6;font-size:13px;max-width:780px;margin:18px auto}.status{color:#b6d8b2;min-height:20px;margin:14px 0}footer{border-top:1px solid #ffffff22;padding:24px 0;color:#8fa4c6;font-size:13px}@media(max-width:700px){.cards{grid-template-columns:1fr}.hero{padding:48px 7%}.card p{min-height:0}}
+
+.server-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.server{display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid #ffffff18;border-radius:16px;background:linear-gradient(145deg,#142b4d,#09172d);min-width:0}
+.server .flag{font-size:32px;line-height:1;flex:0 0 42px}
+.server h3{font-size:17px;margin:0 0 6px;color:#fff}
+.server p{margin:0;color:#aebed7;font-size:13px;letter-spacing:.3px}
+.server-note{margin-left:auto;color:#f4c45e;font-size:11px;text-align:right}
+.server.featured{border-color:#d8a944;box-shadow:0 0 0 1px #d8a94422}
+@media(max-width:700px){.server-list{grid-template-columns:1fr}.server{padding:14px}.server h3{font-size:16px}}
 </style></head><body><div class="wrap">
 <header><img src="assets/logo.png" alt="Логотип">МАРУСЯ VPN</header>
 <div class="hero"><video autoplay muted loop playsinline poster="assets/logo.png"><source src="assets/banner.mp4" type="video/mp4"></video><div><div class="tag">ИМПОРТ ПОДПИСКИ</div><h1>МАРУСЯ VPN</h1><p class="lead">Выбери приложение. Для Happ и Incy сайт откроет подтверждение импорта. Для Karing скопируй адрес и добавь его через меню приложения.</p></div></div>
@@ -9,6 +18,31 @@
 <article class="card"><h3>Incy</h3><p>Открыть приложение и передать ему адрес подписки.</p><a class="btn" id="incy" href="#">Добавить в Incy</a></article>
 <article class="card"><h3>Karing</h3><p>Скопировать ссылку. В Karing нажми «+» → «Import Configuration Link».</p><button class="btn" id="karing">Скопировать для Karing</button></article>
 </div><p class="hint center">После перехода Happ или Incy могут показать окно подтверждения. Если приложение не открылось, проверь, установлено ли оно.</p></section>
+
+<section id="servers">
+  <div class="tag center">ГЕОГРАФИЯ ПОДКЛЮЧЕНИЙ</div>
+  <h2>Список серверов</h2>
+  <p class="hint center">Выбери подходящий сервер в приложении. Названия и протоколы приведены по присланным скриншотам.</p>
+  <div class="server-list">
+    <article class="server"><span class="flag">🇷🇺</span><div><h3>Автовыбор 🚀</h3><p>VLESS / TCP / TLS</p></div><span class="server-note">Автовыбор</span></article>
+    <article class="server"><span class="flag">🇷🇺</span><div><h3>Россия</h3><p>VLESS / TCP / TLS</p></div></article>
+    <article class="server featured"><span class="flag">🇳🇱</span><div><h3>Нидерланды (лучший)</h3><p>VLESS / TCP / TLS</p></div><span class="server-note">Рекомендуемый</span></article>
+    <article class="server"><span class="flag">🇦🇹</span><div><h3>Австрия</h3><p>VLESS / TCP / TLS</p></div></article>
+    <article class="server"><span class="flag">🇵🇱</span><div><h3>Польша</h3><p>VLESS / XHTTP / TLS</p></div></article>
+    <article class="server"><span class="flag">🇬🇪</span><div><h3>Грузия</h3><p>VLESS / TCP / TLS</p></div></article>
+    <article class="server"><span class="flag">🇸🇪</span><div><h3>Швеция</h3><p>VLESS / TCP / TLS</p></div></article>
+    <article class="server"><span class="flag">🇫🇷</span><div><h3>ИИ сервер</h3><p>VLESS / TCP / TLS</p></div></article>
+    <article class="server"><span class="flag">🇧🇬</span><div><h3>Болгария 50Mbit/s</h3><p>VLESS / TCP / REALITY</p></div></article>
+    <article class="server"><span class="flag">🇺🇸</span><div><h3>Ютуб</h3><p>VLESS / TCP / REALITY</p></div></article>
+    <article class="server"><span class="flag">🇷🇺</span><div><h3>LTE | Обход Мощный</h3><p>VLESS / TCP / TLS</p></div></article>
+    <article class="server"><span class="flag">🇷🇺</span><div><h3>LTE | Обход Лучший</h3><p>VLESS / TCP / TLS</p></div></article>
+    <article class="server"><span class="flag">🇷🇺</span><div><h3>LTE | Обход Универсальный 2</h3><p>VLESS / TCP / TLS</p></div></article>
+    <article class="server"><span class="flag">🇷🇺</span><div><h3>LTE | Обход кроме МТС</h3><p>VLESS / TCP / TLS</p></div></article>
+    <article class="server"><span class="flag">🇷🇺</span><div><h3>LTE|FREE</h3><p>VLESS / XHTTP / TLS</p></div></article>
+    <article class="server"><span class="flag">🇷🇺</span><div><h3>LTE|FREE²</h3><p>VLESS / XHTTP / TLS</p></div></article>
+  </div>
+</section>
+
 <section><div class="tag center">АДРЕС ПОДПИСКИ</div><h2>Ссылка подписки</h2><div class="sub" id="sub"></div><div class="center" style="margin-top:16px"><button class="btn secondary" id="copy">Скопировать ссылку</button><p class="status" id="status" aria-live="polite"></p></div><p class="hint">Не публикуй персональные ссылки доступа в открытом доступе. Импорт выполняется только после подтверждения в самом приложении.</p></section>
 <footer>© <span id="year"></span> МАРУСЯ VPN</footer></div>
 <script>
